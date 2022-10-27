@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse360p1.EditContactInfo">
+   <children>
+      <GridPane hgap="5.0" layoutX="14.0" layoutY="41.0" prefHeight="224.0" prefWidth="461.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="151.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="293.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="121.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" GridPane.rowIndex="1" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="2" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance Provider" GridPane.rowIndex="3" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy" GridPane.rowIndex="4" />
+            <TextField fx:id="email_field" promptText="Email" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" />
+            <TextField fx:id="phoneNo_field" promptText="Phone Number" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="address_field" promptText="Address" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="insurance_field" promptText="Insurance Provider" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="pharmacy_field" promptText="Pharmacy" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="email_submit" mnemonicParsing="false" onAction="#saveEmail" style="-fx-background-color: #075de8;" text="Submit" textFill="WHITE" GridPane.columnIndex="2" />
+            <Button fx:id="phoneNo_submit" mnemonicParsing="false" onAction="#savePhoneNo" style="-fx-background-color: #075de8;" text="Submit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="address_submit" mnemonicParsing="false" onAction="#saveAddress" style="-fx-background-color: #075de8;" text="Submit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="insurance_submit" mnemonicParsing="false" onAction="#saveInsurance" style="-fx-background-color: #075de8;" text="Submit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="pharmacy_submit" mnemonicParsing="false" onAction="#savePharmacy" style="-fx-background-color: #075de8;" text="Submit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Edit Contact Info" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="263.0" layoutY="318.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #075de8;" text="Go Back" textFill="WHITE" />
+      <Label fx:id="successPrompt" layoutX="14.0" layoutY="282.0" text="Changes saved!" textFill="#00c800" textOverrun="CLIP" visible="false" />
+   </children>
+</AnchorPane>

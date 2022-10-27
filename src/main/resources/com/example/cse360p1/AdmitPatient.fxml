@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdmitPatient">
+   <children>
+      <HBox layoutX="35.0" layoutY="74.0" prefHeight="58.0" prefWidth="519.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign patient " />
+            <ChoiceBox fx:id="patient_choice" prefWidth="150.0" style="-fx-background-color: #6c727a;" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" to Doctor " />
+            <ChoiceBox fx:id="doctor_choice" prefWidth="150.0" style="-fx-background-color: #6c727a;" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." />
+         </children>
+      </HBox>
+      <Button fx:id="confirm" layoutX="35.0" layoutY="139.0" mnemonicParsing="false" onAction="#assignPatient" style="-fx-background-color: #075de8;" text="Confirm" textFill="WHITE" />
+      <Button fx:id="back" layoutX="262.0" layoutY="324.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #075de8;" text="Go Back" textFill="WHITE" />
+      <Label fx:id="success_field" layoutX="136.0" layoutY="144.0" text="Success!" textFill="GREEN" visible="false" />
+   </children>
+</AnchorPane>

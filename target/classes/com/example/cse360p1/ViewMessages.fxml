@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse360p1.ViewMessages">
+    <children>
+        <GridPane hgap="5.0" layoutX="20.0" layoutY="60.0" prefHeight="224.0" prefWidth="461.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="151.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="293.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="121.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sender Username:" GridPane.rowIndex="1" />
+                <TextField fx:id="MessageFromChoice_field" promptText="MessageFromChoice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Button fx:id="MessageFromChoice_submit" mnemonicParsing="false" onAction="#submitChoice" text="Submit" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message_From:" GridPane.rowIndex="4" />
+                <TextField fx:id="MessageFrom_field"  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" GridPane.rowIndex="5" />
+                <TextField fx:id="MessageText_Field" prefHeight="100.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+				<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message_From:" GridPane.rowIndex="6" />
+                <TextField fx:id="MessageFrom1_field"  GridPane.columnIndex="1" GridPane.rowIndex="6" />
+			
+				<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" GridPane.rowIndex="7" />
+                <TextField fx:id="MessageText1_Field"   prefHeight="100.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message_From:" GridPane.rowIndex="8" />
+                <TextField fx:id="MessageFrom2_field"  GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" GridPane.rowIndex="9" />
+                <TextField fx:id="MessageText2_Field"  prefHeight="100.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+
+
+
+            </children>
+        </GridPane>
+        <Label layoutX="14.0" layoutY="14.0" text="View Messages">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="back" layoutX="263.0" layoutY="318.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+        <Label fx:id="successPrompt" layoutX="14.0" layoutY="282.0" text="Changes saved!" textFill="#00c800" textOverrun="CLIP" visible="false" />
+    </children>
+</AnchorPane>

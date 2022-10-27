@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse360p1.ViewPatientData">
+    <children>
+        <TextFlow fx:id="summary_flow" layoutX="24.0" layoutY="87.0" prefHeight="154.0" prefWidth="545.0" style="-fx-background-color: #6c727a;">
+            <children>
+                <Text fx:id="vitals_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Vitals&gt;" wrappingWidth="86.51953125">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="issues_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: #262626;" text="&lt;Display Issues&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="recommendations_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Reccomendations&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="pharmacy_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Pharmacy&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="insurance_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Insurace&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="immunization_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Immunizations&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+                <Text fx:id="prescription_text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Display Prescriptions&gt;">
+                    <font>
+                        <Font size="11.0" />
+                    </font></Text>
+            </children>
+        </TextFlow>
+        <HBox layoutX="7.0" layoutY="32.0" prefHeight="40.0" prefWidth="579.0">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose data to view:" />
+                <ChoiceBox fx:id="patient_choice" prefWidth="150.0">
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </HBox.margin>
+                </ChoiceBox>
+                <Button fx:id="summary_button" mnemonicParsing="false" onAction="#loadSummary" prefHeight="25.0" prefWidth="121.0" text="View Data" textFill="WHITE" />
+            </children>
+        </HBox>
+        <Button fx:id="back" layoutX="260.0" layoutY="341.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+    </children>
+</AnchorPane>

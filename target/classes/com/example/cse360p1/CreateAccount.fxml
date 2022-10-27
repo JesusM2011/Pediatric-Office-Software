@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse360p1.CreateAccount">
+   <children>
+      <GridPane hgap="5.0" layoutX="14.0" layoutY="41.0" prefHeight="265.0" prefWidth="461.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="151.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="293.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.rowIndex="1" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" GridPane.rowIndex="2" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" GridPane.rowIndex="6" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify Password" GridPane.rowIndex="7" />
+            <TextField fx:id="firstName_field" promptText="First name" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" />
+            <TextField fx:id="lastName_field" promptText="Last name" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="birthday_field" promptText="MM/DD/YYYY" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" GridPane.rowIndex="5" />
+            <TextField fx:id="email_field" promptText="example@example.com" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="phoneNo_field" promptText="000-000-0000" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="username_field" promptText="username" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <PasswordField fx:id="password_field" promptText="password" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <PasswordField fx:id="verify_field" promptText="verify password" style="-fx-background-color: #6c727a;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" GridPane.rowIndex="3" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Create Account" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="171.0" layoutY="318.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #075de8;" text="Go Back" textFill="WHITE" />
+      <Label fx:id="username_error" layoutX="480.0" layoutY="213.0" text="username taken" textFill="RED" textOverrun="CLIP" visible="false" />
+      <Button fx:id="create" layoutX="300.0" layoutY="318.0" mnemonicParsing="false" onAction="#createAccount" style="-fx-background-color: #075de8;" text="Create Account" textFill="WHITE" />
+      <Label fx:id="password_error" layoutX="300.0" layoutY="357.0" text="passwords do not match" textFill="RED" textOverrun="CLIP" visible="false" />
+   </children>
+</AnchorPane>
